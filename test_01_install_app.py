@@ -4,6 +4,9 @@ from utils.adb_helper import adb
 APK_PATH = r"C:\Temp\phone_tests\ApiDemos-debug.apk"
 PACKAGE_NAME = "io.appium.android.apis"
 
+'''
+drobna zmiana
+'''
 
 @pytest.mark.install
 def test_01_install_app():
