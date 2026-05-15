@@ -1,0 +1,20 @@
+def driver(request):
+    options = UiAutomator2Options()
+    options.platform_name = "Android"
+    options.automation_name = "UiAutomator2"
+    options.device_name = "10HF4SFJJ6000BZ"
+    options.udid = "10HF4SFJJ6000BZ"
+    options.app_package = "io.appium.android.apis"
+    options.app_activity = ".ApiDemos"
+    options.no_reset = False
+    options.full_reset = False
+
+    driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
+    request.node.driver = driver
+
+    driver.terminate_app("io.appium.android.apis")
+    driver.activate_app("io.appium.android.apis")
+
+    yield driver
+
+    driver.quit()
