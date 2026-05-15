@@ -5,7 +5,7 @@ APK_PATH = r"C:\Temp\phone_tests\ApiDemos-debug.apk"
 PACKAGE_NAME = "io.appium.android.apis"
 
 '''
-drobna zmiana
+drobna zmiana 2
 '''
 
 @pytest.mark.install
